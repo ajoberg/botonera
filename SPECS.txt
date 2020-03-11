@@ -1,0 +1,22 @@
+inicial
+- [x] stand-alone (winrar para generar archivo descomprimible)
+- [x] puede guardar datos localmente (principalmente, la carpeta seleccionada)
+- [x] lee la estructura de carpetas de la carpeta seleccionada y genera botones para los audios
+- [x] reproduce audios
+- [x] botón de stop all
+
+mejoras
+- [x] wavs
+- [x] search (en subdirectorios)
+- [x] navegación para arriba, mostrar path
+- [x] controles fijos arriba, que la lista scrollee sola
+- [x] foco en search cuando la app retoma foco, y clickeando en cualquier lado
+- [x] ocultar las extensiones de los archivos
+- [ ] click derecho en carpeta => "playback as playlist" (crea un player con los contenidos como playlist)
+- [x] toggle para que volver a clickear un trigger lo frene o triggeree una instancia nueva (actual)
+- [ ] volumen global
+- [ ] progreso de cada trigger (visible en los controles (y en el trigger mismo?))
+- [x] refresh
+- [x] checkear que la carpeta exista al iniciar
+- [x] output del audio?
+- [ ] ajustador de levels? (como la ext de whastapp)

@@ -1,0 +1,110 @@
+body {
+    font-family: sans-serif;
+    background-color: #202020;
+    color: white;
+    overflow-y: hidden;
+    margin: 0px;
+}
+
+input {
+    font-size: medium;
+}
+
+#list {
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#list div {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #777777;
+}
+#list div:hover {
+    background-color: #444444;
+}
+
+#list div.folder {
+    background-color: #f4d26f;
+    color: black;
+}
+#list div.folder:hover {
+    background-color: #a68f4c;
+}
+
+#empty {
+    margin: 20px;
+}
+
+#topContainer {
+    background-color: #202020;
+    padding: 10px;
+    height: 40px;
+}
+
+#loading {
+    margin: 20px;
+}
+
+#selectFolderBtn {
+    display: block;
+    margin-top: 20px;
+    font-size: large;
+}
+
+#controls {
+    float: right;
+}
+
+#stop {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #b2b2b2;
+    border: none;
+    cursor: pointer;
+}
+#stop:hover:not(.disabled) {
+    background-color: #ffffff;
+}
+#stop.disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+#folderNav {
+    float: right;
+    margin-right: 20px;
+}
+
+#upFolder, #refresh {
+    border-radius: 10%;
+    width: 30px;
+    height: 30px;
+    background-color: #f4d26f;
+    border: none;
+    cursor: pointer;
+}
+#upFolder {
+    margin-right: 5px;
+}
+#upFolder:hover:not(.disabled),
+#refresh:hover:not(.disabled) {
+    background-color: #feecb7;
+}
+#upFolder.disabled,
+#refresh.disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+#pathView {
+    display: inline-block;
+    margin-left: 30px;
+    color: darkgray;
+    font-style: italic;
+    cursor: default;
+    font-size: smaller;
+}
