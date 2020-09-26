@@ -8,7 +8,7 @@
     "build": "electron-packager . botonera-checkpoint --platform win32 --arch x64 --icon=icon.ico --prune=true --overwrite --out dist/ --ignore=data.json",
     "setup": "electron-installer-windows --src dist/botonera-checkpoint-win32-x64/ --dest dist/installers/"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/ajoberg/botonera",
   "keywords": [],
   "author": "joberg",
   "license": "CC0-1.0",

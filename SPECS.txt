@@ -20,3 +20,5 @@ mejoras
 - [x] checkear que la carpeta exista al iniciar
 - [x] output del audio?
 - [ ] ajustador de levels? (como la ext de whastapp)
+- [x] traer al frente con un atajo de teclado
+- [ ] atajos para manejo solo teclado
