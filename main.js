@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, Menu, dialog, ipcMain } = require('electron');
+const { app, BrowserWindow, Menu, dialog, ipcMain, globalShortcut } = require('electron');
 const path = require('path');
 const { debounce } = require('lodash');
 const { readData, writeData } = require('./data-handler');
@@ -12,6 +12,13 @@ start = () => {
 }
 
 createWindow = async (width = 800, height = 600, directory) => {
+  if (mainWindow !== undefined) {
+    mainWindow.minimize();
+    mainWindow.focus();
+
+    return;
+  }
+
   mainWindow = new BrowserWindow({
     width,
     height,
@@ -48,7 +55,11 @@ handleResize = () => {
   });
 }
 
-app.on('ready', start);
+app.on('ready', () => {
+  globalShortcut.register('CommandOrControl+Shift+B', createWindow)
+  start();
+});
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
@@ -77,7 +88,7 @@ displaySystemInfo = async () => {
   await dialog.showMessageBox(mainWindow, {
     title: 'System Information',
     type: 'info',
-    message: 'Node version: '+process.versions.node+'\nChrome '+process.versions.chrome+'\nElectron '+process.versions.electron,
+    message: 'Node version: ' + process.versions.node + '\nChrome ' + process.versions.chrome + '\nElectron ' + process.versions.electron,
   });
 }
 
