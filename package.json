@@ -13,7 +13,7 @@
   "author": "joberg",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^6.1.12",
+    "electron": "^9.4.0",
     "electron-installer-windows": "*",
     "electron-packager": "^14.0.6",
     "electron-prebuilt": "*",
